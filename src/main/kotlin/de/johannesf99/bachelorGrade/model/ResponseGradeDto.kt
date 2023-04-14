@@ -1,4 +1,6 @@
 package de.johannesf99.bachelorGrade.model
 
-class ResponseGradeDto {
-}
+internal data class ResponseGradeDto(
+    val grade: Double,
+    val module: ResponseModuleDTO,
+)

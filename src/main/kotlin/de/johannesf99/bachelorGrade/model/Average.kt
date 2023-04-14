@@ -1,4 +1,7 @@
 package de.johannesf99.bachelorGrade.model
 
-class Average {
-}
+internal data class Average(
+    val grade: Double,
+    val ects: Int,
+    val exams: List<ResponseGradeDto>
+)

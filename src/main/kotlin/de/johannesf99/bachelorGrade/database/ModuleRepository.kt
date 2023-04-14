@@ -1,6 +1,6 @@
-package de.johannesf99.bachelor_grade.database
+package de.johannesf99.bachelorGrade.database
 
-import de.johannesf99.bachelor_grade.model.Module
+import de.johannesf99.bachelorGrade.model.Module
 import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
 

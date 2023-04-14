@@ -1,4 +1,6 @@
 package de.johannesf99.bachelorGrade.model
 
-class CreateGradeDto {
-}
+internal class CreateGradeDto(
+    val grade: Double,
+    val moduleId: Long,
+)

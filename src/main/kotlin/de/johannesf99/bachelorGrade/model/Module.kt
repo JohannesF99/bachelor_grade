@@ -1,16 +1,22 @@
-package de.johannesf99.bachelor_grade.model
+package de.johannesf99.bachelorGrade.model
 
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
-import java.util.*
+import jakarta.persistence.*
 
 @Entity
-data class Module(
+internal data class Module(
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private var id: UUID?,
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private var id: Long? = null,
+
+    @Column(nullable = false)
     private val name: String,
-    private val ects: Int,
-)
+
+    @Column(nullable = false)
+    val ects: Int,
+) {
+    fun toDto(): ResponseModuleDTO = ResponseModuleDTO(
+        id = this.id!!,
+        ects = this.ects,
+        name = this.name,
+    )
+}

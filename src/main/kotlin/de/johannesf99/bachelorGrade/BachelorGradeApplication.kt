@@ -1,4 +1,4 @@
-package de.johannesf99.bachelor_grade
+package de.johannesf99.bachelorGrade
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

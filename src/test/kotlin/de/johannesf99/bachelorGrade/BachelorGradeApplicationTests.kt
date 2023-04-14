@@ -1,4 +1,4 @@
-package de.johannesf99.bachelor_grade
+package de.johannesf99.bachelorGrade
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
