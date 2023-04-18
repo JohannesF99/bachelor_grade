@@ -9,7 +9,7 @@ on:
 
 jobs:
   Build:
-      #if: ${{ github.event.workflow_run.conclusion == 'success' }}
+      if: ${{ github.event.workflow_run.conclusion == 'success' }}
       runs-on: ubuntu-latest
 
       steps:
@@ -33,27 +33,18 @@ jobs:
             path: app.jar
 
   DockerbuildAndPush:
-      needs: Build
       runs-on: ubuntu-latest
 
       steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      -
-        name: Set up QEMU
-        uses: docker/setup-qemu-action@v1
-      -
-        name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
+        uses: actions/checkout@v3
 
-      -
-        name: Build and push
-        id: docker_build
-        uses: docker/build-push-action@v2
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile -t bachelor_grade
+
+      - name: Archive Docker image
+        uses: actions/upload-artifact@v2
         with:
-          context: .
-          push: true
-          tags: user/app:latest
-          cache-from: type=registry,ref=user/app:latest
-          cache-to: type=inline
+          name: bachelor_grade
+          path: /var/
   
