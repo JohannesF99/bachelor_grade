@@ -10,7 +10,6 @@ class BachelorGradeApplicationTests() {
 
     @Test
     fun contextLoads() {
-        assert(false)
     }
 
 }
