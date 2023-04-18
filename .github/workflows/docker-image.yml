@@ -23,3 +23,4 @@ jobs:
       run: |
        docker build . --file Dockerfile --tag ghcr.io/johannesf99/bachelor_grade:latest
        docker push ghcr.io/johannesf99/bachelor_grade:latest
+
