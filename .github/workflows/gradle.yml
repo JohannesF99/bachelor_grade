@@ -35,10 +35,3 @@ jobs:
 
             - name: Build with Gradle
               run: ./gradlew clean build -x test
-
-            - name: Release Jar file
-              run: mv build/libs/$(ls build/libs) app.jar
-            - uses: actions/upload-artifact@master
-              with:
-                name: BachelorGrade
-                path: app.jar
