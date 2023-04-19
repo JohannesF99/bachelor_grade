@@ -3,3 +3,4 @@
 Ein Microservice zum Berechnen der Bachelor-Durchschnittsnote.
 
 [![Test & Build](https://github.com/JohannesF99/bachelor_grade/actions/workflows/gradle.yml/badge.svg)](https://github.com/JohannesF99/bachelor_grade/actions/workflows/gradle.yml)
+[![Release](https://github.com/JohannesF99/bachelor_grade/actions/workflows/release.yml/badge.svg)](https://github.com/JohannesF99/bachelor_grade/actions/workflows/release.yml)
